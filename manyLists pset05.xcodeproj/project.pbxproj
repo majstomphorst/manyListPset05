@@ -10,6 +10,7 @@
 		28678B081EC38A870030376D /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28678AFB1EC38A7E0030376D /* SQLite.framework */; };
 		28678B091EC38A8B0030376D /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28678AFB1EC38A7E0030376D /* SQLite.framework */; };
 		28678B0A1EC38A8B0030376D /* SQLite.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 28678AFB1EC38A7E0030376D /* SQLite.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		28678B0F1EC38B030030376D /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28678B0E1EC38B030030376D /* Database.swift */; };
 		28C2D2BF1EC38379002629EC /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C2D2BE1EC38379002629EC /* ListTableViewCell.swift */; };
 		28CB165C1EC2F6670066A0D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28CB165B1EC2F6670066A0D9 /* AppDelegate.swift */; };
 		28CB165E1EC2F6670066A0D9 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28CB165D1EC2F6670066A0D9 /* ListViewController.swift */; };
@@ -93,6 +94,7 @@
 
 /* Begin PBXFileReference section */
 		28678AF01EC38A7E0030376D /* SQLite.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SQLite.xcodeproj; path = "manyLists pset05/External/SQLite.xcodeproj"; sourceTree = "<group>"; };
+		28678B0E1EC38B030030376D /* Database.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		28C2D2BE1EC38379002629EC /* ListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
 		28CB16581EC2F6670066A0D9 /* manyLists pset05.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "manyLists pset05.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		28CB165B1EC2F6670066A0D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 				28CB16621EC2F6670066A0D9 /* Assets.xcassets */,
 				28CB16641EC2F6670066A0D9 /* LaunchScreen.storyboard */,
 				28CB16671EC2F6670066A0D9 /* Info.plist */,
+				28678B0E1EC38B030030376D /* Database.swift */,
 			);
 			path = "manyLists pset05";
 			sourceTree = "<group>";
@@ -304,6 +307,7 @@
 			files = (
 				28CB165E1EC2F6670066A0D9 /* ListViewController.swift in Sources */,
 				28CB165C1EC2F6670066A0D9 /* AppDelegate.swift in Sources */,
+				28678B0F1EC38B030030376D /* Database.swift in Sources */,
 				28C2D2BF1EC38379002629EC /* ListTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

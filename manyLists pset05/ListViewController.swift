@@ -17,6 +17,8 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        Database.sharedinstance
+        Database.sharedinstance.createTable(tableName: "second") 
         // Do any additional setup after loading the view, typically from a nib.
     }
 
