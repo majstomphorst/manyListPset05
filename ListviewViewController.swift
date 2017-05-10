@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  ListviewViewController.swift
 //  manyLists pset05
 //
 //  Created by Maxim Stomphorst on 10/05/2017.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ListviewViewController: UIViewController,  UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var listTableView: UITableView!
     
@@ -16,7 +16,8 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -24,18 +25,12 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
         // Dispose of any resources that can be recreated.
     }
     
-    //MARK: tableview functions
+    //Mark: tableview
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return lst.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = listTableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ListTableViewCell
-        
-        cell.listCell.text = lst[indexPath.row]
-        
-        return cell
+        let cell = 
     }
-
 }
-
