@@ -96,6 +96,16 @@ class Database {
         }
     }
     
+    func dropRow(witchTable: Table, witchColum: Expression<String>, text: String) {
+        
+        let dropRow = witchTable.filter(witchColum == text)
+        do {
+            try connection!.run(dropRow.delete())
+        } catch {
+            print("error with deleting")
+        }
+    }
+    
     
     
         

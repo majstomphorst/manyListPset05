@@ -27,7 +27,6 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
         self.listTableView.reloadData()
     }
     
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -46,6 +45,25 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
         return cell
     }
     
+    // checking if item may be edited always true
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        
+        // handle delete (by removing the data from the database and updating the tableview)
+        if (editingStyle == UITableViewCellEditingStyle.delete) {
+            Database.shared.dropRow(witchTable: Database.shared.listTable, witchColum: Database.shared.list, text: concentDatabase[indexPath.row])
+        }
+        
+        concentDatabase = Database.shared.readDatabase(witchTable: Database.shared.listTable, witchColum: Database.shared.list)
+        
+        
+        self.listTableView.reloadData()
+        
+    }
     
 
 }
