@@ -13,7 +13,6 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     @IBOutlet weak var listTableView: UITableView!
     
-    
     // store the concent of the database only the "todoText" field
     var concentDatabase = [String]()
     
@@ -21,24 +20,17 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         concentDatabase = Database.shared.readDatabase(witchTable: Database.shared.listTable, witchColum: Database.shared.list)
         
-        
         self.listTableView.reloadData()
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "todoSegue" {
-            if let indexPath = listTableView.indexPathForSelectedRow {
-                let destVC = segue.destination as! TodoViewController
-                destVC.tableLocation = concentDatabase[indexPath.row]
-            }
-        }
-    }
-    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "todoSegue" {
+//            if let indexPath = listTableView.indexPathForSelectedRow {
+//                let destVC = segue.destination as! TodoViewController
+//                destVC.tableLocation = concentDatabase[indexPath.row]
+//            }
+//        }
+//    }
     
     
     //MARK: tableview functions
@@ -58,7 +50,6 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
     }
-    
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         

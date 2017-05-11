@@ -25,7 +25,6 @@ class ListAddViewController: UIViewController {
     }
 
     
-    
     //MARK: actions
     @IBAction func addListButton(_ sender: Any) {
         Database.shared.rideListTableDatabase(text: addListField.text!)

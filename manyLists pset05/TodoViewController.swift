@@ -7,13 +7,16 @@
 //
 
 import UIKit
-import SQLite
 
-class TodoViewController: UIViewController {
+class TodoViewController: UIViewController, UITabBarDelegate, UITableViewDataSource {
+
+    let lst = ["Dog","Cat"]
     
-    var tableLocation = String()
-        
-    override func viewDidAppear(_ animated: Bool) {
+    @IBOutlet weak var todoTableView: UITableView!
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,14 +24,18 @@ class TodoViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "AddtodoSegue" {
-            let destVC = segue.destination as! TodoAddViewController
-            destVC.list = tableLocation
-        }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return lst.count
     }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = todoTableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TodoTableViewCell
+        
+        cell.addCell.text = lst[indexPath.row]
+        
+        return cell
+    }
+
 }
-
-
-
-
