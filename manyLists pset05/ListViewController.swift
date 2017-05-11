@@ -13,12 +13,14 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     @IBOutlet weak var listTableView: UITableView!
     
-    let lst = ["row1","row2"]
+    // let lst = ["row1","row2"]
+    
+    // store the concent of the database only the "todoText" field
+    var concentOfListTableDatabase = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        Database.sharedinstance
-        Database.sharedinstance.createTable(tableName: "second") 
+        concentOfListTableDatabase = Database.shared.readListTableDatabase()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -29,16 +31,18 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     //MARK: tableview functions
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return lst.count
+        return concentOfListTableDatabase.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = listTableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ListTableViewCell
         
-        cell.listCell.text = lst[indexPath.row]
+        cell.listCell.text = concentOfListTableDatabase[indexPath.row]
         
         return cell
     }
+    
+    
 
 }
 
