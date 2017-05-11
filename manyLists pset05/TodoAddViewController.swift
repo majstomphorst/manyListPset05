@@ -9,13 +9,15 @@
 import UIKit
 
 class TodoAddViewController: UIViewController {
-
-    @IBOutlet weak var addTodoField: UITextField!
     
+    var list = String()
+    
+    @IBOutlet weak var addTodoField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        print(list)
         // Do any additional setup after loading the view.
     }
 
@@ -24,6 +26,10 @@ class TodoAddViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBOutlet weak var addTodoButton: UIButton!
+    @IBAction func addTodoButton(_ sender: Any) {
+        print("button click addTodoButton")
+    }
+    
+    
 
 }

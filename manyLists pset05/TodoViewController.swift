@@ -13,9 +13,7 @@ class TodoViewController: UIViewController {
     
     var tableLocation = String()
         
-        
     override func viewDidAppear(_ animated: Bool) {
-        print(tableLocation)
     }
 
     override func didReceiveMemoryWarning() {
@@ -23,7 +21,14 @@ class TodoViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "AddtodoSegue" {
+            let destVC = segue.destination as! TodoAddViewController
+            destVC.list = tableLocation
+        }
+    }
 }
+
+
+
+

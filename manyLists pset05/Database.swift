@@ -96,6 +96,17 @@ class Database {
         }
     }
     
+    
+    func rideTodoTableDatabase(text: String, table: String, completed: Bool = false) {
+        let insert = todoTable.insert(todoText <- text, list <- table, check <- completed)
+        
+        do {
+            try connection!.run(insert)
+        } catch {
+            print("database insertion failed\(error)")
+        }
+    }
+    
     func dropRow(witchTable: Table, witchColum: Expression<String>, text: String) {
         
         let dropRow = witchTable.filter(witchColum == text)

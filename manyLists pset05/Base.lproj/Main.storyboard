@@ -103,7 +103,7 @@
                                         <rect key="frame" x="8" y="70.5" width="327" height="30"/>
                                         <state key="normal" title="Button"/>
                                         <connections>
-                                            <action selector="addListButton:" destination="58y-gY-dVj" eventType="touchUpInside" id="0HQ-uC-LTn"/>
+                                            <action selector="addTodoButton:" destination="pgx-UB-Vlx" eventType="touchUpInside" id="b4u-Ri-imk"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -126,7 +126,6 @@
                     </view>
                     <navigationItem key="navigationItem" title="Add new ToDo" id="Fi3-bK-nAm" userLabel="Add new list"/>
                     <connections>
-                        <outlet property="addTodoButton" destination="fdQ-fB-ouX" id="glw-DR-esG"/>
                         <outlet property="addTodoField" destination="a1G-Uy-SYa" id="HG8-BC-CDg"/>
                     </connections>
                 </viewController>
@@ -261,7 +260,7 @@
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="PuG-e1-vbn">
                             <color key="tintColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
-                                <segue destination="pgx-UB-Vlx" kind="show" id="M02-4h-fzC"/>
+                                <segue destination="pgx-UB-Vlx" kind="show" identifier="AddtodoSegue" id="M02-4h-fzC"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
