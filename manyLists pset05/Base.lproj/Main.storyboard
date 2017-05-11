@@ -10,7 +10,63 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--List View Controller-->
+        <!--Add new list-->
+        <scene sceneID="ZU6-VA-YV9">
+            <objects>
+                <viewController id="58y-gY-dVj" customClass="ListAddViewController" customModule="manyLists_pset05" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fBN-U5-tAQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="TlX-HH-BVn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="D9J-23-r0o">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="oU0-Hj-MOx">
+                                <rect key="frame" x="16" y="72" width="343" height="100.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gwj-gA-haU">
+                                        <rect key="frame" x="8" y="0.0" width="327" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eej-Fj-NzJ">
+                                        <rect key="frame" x="8" y="30.5" width="327" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="afC-l8-MP8">
+                                        <rect key="frame" x="8" y="70.5" width="327" height="30"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailingMargin" secondItem="afC-l8-MP8" secondAttribute="trailing" constant="8" id="8vD-1Q-h8j"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="eej-Fj-NzJ" secondAttribute="trailing" constant="8" id="9to-tD-XTz"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="Gwj-gA-haU" secondAttribute="trailing" constant="8" id="Bmu-1Q-e8K"/>
+                                    <constraint firstItem="afC-l8-MP8" firstAttribute="leading" secondItem="oU0-Hj-MOx" secondAttribute="leadingMargin" constant="8" id="KsM-or-xoy"/>
+                                    <constraint firstItem="Gwj-gA-haU" firstAttribute="leading" secondItem="oU0-Hj-MOx" secondAttribute="leadingMargin" constant="8" id="WsB-X6-j1g"/>
+                                    <constraint firstItem="eej-Fj-NzJ" firstAttribute="leading" secondItem="oU0-Hj-MOx" secondAttribute="leadingMargin" constant="8" id="kli-Yz-9WW"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="oU0-Hj-MOx" secondAttribute="trailing" id="01O-Mt-d3C"/>
+                            <constraint firstItem="oU0-Hj-MOx" firstAttribute="top" secondItem="fBN-U5-tAQ" secondAttribute="bottom" constant="8" id="ASp-KI-TZt"/>
+                            <constraint firstItem="oU0-Hj-MOx" firstAttribute="leading" secondItem="D9J-23-r0o" secondAttribute="leadingMargin" id="K0C-6G-DXq"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add new list" id="C7f-iO-sv0" userLabel="Add new list"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BBo-qn-nBD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="850" y="-564"/>
+        </scene>
+        <!--Lists-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ListViewController" customModule="manyLists_pset05" customModuleProvider="target" sceneMemberID="viewController">
@@ -66,7 +122,14 @@
                             <constraint firstItem="w3j-lf-p7E" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="dZF-Vj-jmO"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="crI-A1-1FJ"/>
+                    <navigationItem key="navigationItem" title="Lists" id="crI-A1-1FJ">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="81X-Lx-fPS">
+                            <color key="tintColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <segue destination="58y-gY-dVj" kind="show" id="jQm-bo-nnN"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="listTableView" destination="w3j-lf-p7E" id="yev-PA-Hfh"/>
                     </connections>

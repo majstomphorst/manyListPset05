@@ -17,6 +17,7 @@
 		28CB16611EC2F6670066A0D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28CB165F1EC2F6670066A0D9 /* Main.storyboard */; };
 		28CB16631EC2F6670066A0D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28CB16621EC2F6670066A0D9 /* Assets.xcassets */; };
 		28CB16661EC2F6670066A0D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28CB16641EC2F6670066A0D9 /* LaunchScreen.storyboard */; };
+		28CBDDB91EC4852B0036DF84 /* ListAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28CBDDB81EC4852B0036DF84 /* ListAddViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +104,7 @@
 		28CB16621EC2F6670066A0D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		28CB16651EC2F6670066A0D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		28CB16671EC2F6670066A0D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		28CBDDB81EC4852B0036DF84 /* ListAddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListAddViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				28CB165D1EC2F6670066A0D9 /* ListViewController.swift */,
+				28CBDDB81EC4852B0036DF84 /* ListAddViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -307,6 +310,7 @@
 			files = (
 				28CB165E1EC2F6670066A0D9 /* ListViewController.swift in Sources */,
 				28CB165C1EC2F6670066A0D9 /* AppDelegate.swift in Sources */,
+				28CBDDB91EC4852B0036DF84 /* ListAddViewController.swift in Sources */,
 				28678B0F1EC38B030030376D /* Database.swift in Sources */,
 				28C2D2BF1EC38379002629EC /* ListTableViewCell.swift in Sources */,
 			);
