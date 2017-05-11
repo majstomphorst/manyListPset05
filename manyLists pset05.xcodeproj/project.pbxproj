@@ -11,6 +11,8 @@
 		28678B091EC38A8B0030376D /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28678AFB1EC38A7E0030376D /* SQLite.framework */; };
 		28678B0A1EC38A8B0030376D /* SQLite.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 28678AFB1EC38A7E0030376D /* SQLite.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		28678B0F1EC38B030030376D /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28678B0E1EC38B030030376D /* Database.swift */; };
+		28736D711EC4E1BF0046AB80 /* TodoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28736D701EC4E1BF0046AB80 /* TodoViewController.swift */; };
+		28736D791EC4E8760046AB80 /* TodoAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28736D781EC4E8760046AB80 /* TodoAddViewController.swift */; };
 		28C2D2BF1EC38379002629EC /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C2D2BE1EC38379002629EC /* ListTableViewCell.swift */; };
 		28CB165C1EC2F6670066A0D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28CB165B1EC2F6670066A0D9 /* AppDelegate.swift */; };
 		28CB165E1EC2F6670066A0D9 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28CB165D1EC2F6670066A0D9 /* ListViewController.swift */; };
@@ -96,6 +98,8 @@
 /* Begin PBXFileReference section */
 		28678AF01EC38A7E0030376D /* SQLite.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SQLite.xcodeproj; path = "manyLists pset05/External/SQLite.xcodeproj"; sourceTree = "<group>"; };
 		28678B0E1EC38B030030376D /* Database.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
+		28736D701EC4E1BF0046AB80 /* TodoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoViewController.swift; sourceTree = "<group>"; };
+		28736D781EC4E8760046AB80 /* TodoAddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoAddViewController.swift; sourceTree = "<group>"; };
 		28C2D2BE1EC38379002629EC /* ListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
 		28CB16581EC2F6670066A0D9 /* manyLists pset05.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "manyLists pset05.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		28CB165B1EC2F6670066A0D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -171,6 +175,8 @@
 			children = (
 				28CB165D1EC2F6670066A0D9 /* ListViewController.swift */,
 				28CBDDB81EC4852B0036DF84 /* ListAddViewController.swift */,
+				28736D701EC4E1BF0046AB80 /* TodoViewController.swift */,
+				28736D781EC4E8760046AB80 /* TodoAddViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -311,7 +317,9 @@
 				28CB165E1EC2F6670066A0D9 /* ListViewController.swift in Sources */,
 				28CB165C1EC2F6670066A0D9 /* AppDelegate.swift in Sources */,
 				28CBDDB91EC4852B0036DF84 /* ListAddViewController.swift in Sources */,
+				28736D791EC4E8760046AB80 /* TodoAddViewController.swift in Sources */,
 				28678B0F1EC38B030030376D /* Database.swift in Sources */,
+				28736D711EC4E1BF0046AB80 /* TodoViewController.swift in Sources */,
 				28C2D2BF1EC38379002629EC /* ListTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

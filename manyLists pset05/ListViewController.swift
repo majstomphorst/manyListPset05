@@ -9,12 +9,10 @@
 import UIKit
 import SQLite
 
-
 class ListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var listTableView: UITableView!
     
-    // let lst = ["row1","row2"]
     
     // store the concent of the database only the "todoText" field
     var concentDatabase = [String]()
@@ -31,6 +29,17 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "todoSegue" {
+            if let indexPath = listTableView.indexPathForSelectedRow {
+                let destVC = segue.destination as! TodoViewController
+                destVC.tableLocation = concentDatabase[indexPath.row]
+            }
+        }
+    }
+    
+    
     
     //MARK: tableview functions
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -59,7 +68,6 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
         
         concentDatabase = Database.shared.readDatabase(witchTable: Database.shared.listTable, witchColum: Database.shared.list)
-        
         
         self.listTableView.reloadData()
         
