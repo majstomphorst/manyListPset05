@@ -13,6 +13,7 @@
 		28678B0F1EC38B030030376D /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28678B0E1EC38B030030376D /* Database.swift */; };
 		28736D7F1EC4FDE50046AB80 /* TodoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28736D7E1EC4FDE50046AB80 /* TodoViewController.swift */; };
 		28736D811EC4FECD0046AB80 /* TodoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28736D801EC4FECD0046AB80 /* TodoTableViewCell.swift */; };
+		28736D861EC5058F0046AB80 /* todoAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28736D851EC5058F0046AB80 /* todoAddViewController.swift */; };
 		28C2D2BF1EC38379002629EC /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C2D2BE1EC38379002629EC /* ListTableViewCell.swift */; };
 		28CB165C1EC2F6670066A0D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28CB165B1EC2F6670066A0D9 /* AppDelegate.swift */; };
 		28CB165E1EC2F6670066A0D9 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28CB165D1EC2F6670066A0D9 /* ListViewController.swift */; };
@@ -100,6 +101,7 @@
 		28678B0E1EC38B030030376D /* Database.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		28736D7E1EC4FDE50046AB80 /* TodoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoViewController.swift; sourceTree = "<group>"; };
 		28736D801EC4FECD0046AB80 /* TodoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoTableViewCell.swift; sourceTree = "<group>"; };
+		28736D851EC5058F0046AB80 /* todoAddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = todoAddViewController.swift; sourceTree = "<group>"; };
 		28C2D2BE1EC38379002629EC /* ListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
 		28CB16581EC2F6670066A0D9 /* manyLists pset05.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "manyLists pset05.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		28CB165B1EC2F6670066A0D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 				28CB165D1EC2F6670066A0D9 /* ListViewController.swift */,
 				28CBDDB81EC4852B0036DF84 /* ListAddViewController.swift */,
 				28736D7E1EC4FDE50046AB80 /* TodoViewController.swift */,
+				28736D851EC5058F0046AB80 /* todoAddViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -318,6 +321,7 @@
 				28CB165E1EC2F6670066A0D9 /* ListViewController.swift in Sources */,
 				28CB165C1EC2F6670066A0D9 /* AppDelegate.swift in Sources */,
 				28CBDDB91EC4852B0036DF84 /* ListAddViewController.swift in Sources */,
+				28736D861EC5058F0046AB80 /* todoAddViewController.swift in Sources */,
 				28678B0F1EC38B030030376D /* Database.swift in Sources */,
 				28736D7F1EC4FDE50046AB80 /* TodoViewController.swift in Sources */,
 				28C2D2BF1EC38379002629EC /* ListTableViewCell.swift in Sources */,

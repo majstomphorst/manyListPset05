@@ -72,6 +72,64 @@
             </objects>
             <point key="canvasLocation" x="850" y="-564"/>
         </scene>
+        <!--Add new todo-->
+        <scene sceneID="7f2-Fp-huT">
+            <objects>
+                <viewController id="3C0-xz-xkR" customClass="todoAddViewController" customModule="manyLists_pset05" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="flk-E0-Pk7"/>
+                        <viewControllerLayoutGuide type="bottom" id="vvz-30-hCz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="owc-J3-oPz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="oYj-HG-SUn">
+                                <rect key="frame" x="16" y="72" width="343" height="100.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add a new todo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yD3-G8-fdJ">
+                                        <rect key="frame" x="8" y="0.0" width="327" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qR7-at-ZYR">
+                                        <rect key="frame" x="8" y="30.5" width="327" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A9O-Co-NKB">
+                                        <rect key="frame" x="8" y="70.5" width="327" height="30"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="addListButton:" destination="58y-gY-dVj" eventType="touchUpInside" id="HyR-Ef-0I6"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="qR7-at-ZYR" firstAttribute="leading" secondItem="oYj-HG-SUn" secondAttribute="leadingMargin" constant="8" id="Lum-PI-Rkj"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="qR7-at-ZYR" secondAttribute="trailing" constant="8" id="fO1-ei-vwm"/>
+                                    <constraint firstItem="A9O-Co-NKB" firstAttribute="leading" secondItem="oYj-HG-SUn" secondAttribute="leadingMargin" constant="8" id="lPD-0L-tpw"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="yD3-G8-fdJ" secondAttribute="trailing" constant="8" id="sZN-el-lZd"/>
+                                    <constraint firstItem="yD3-G8-fdJ" firstAttribute="leading" secondItem="oYj-HG-SUn" secondAttribute="leadingMargin" constant="8" id="uoq-GF-oAi"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="A9O-Co-NKB" secondAttribute="trailing" constant="8" id="wKs-2F-GA2"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="oYj-HG-SUn" firstAttribute="leading" secondItem="owc-J3-oPz" secondAttribute="leadingMargin" id="N44-aE-WaS"/>
+                            <constraint firstItem="oYj-HG-SUn" firstAttribute="top" secondItem="flk-E0-Pk7" secondAttribute="bottom" constant="8" id="hNW-V2-M1b"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="oYj-HG-SUn" secondAttribute="trailing" id="hR6-aB-h2b"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add new todo" id="JjY-2B-SCL" userLabel="Add new list"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8vw-72-i7v" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1546" y="-564"/>
+        </scene>
         <!--Lists-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -145,7 +203,7 @@
             </objects>
             <point key="canvasLocation" x="836" y="99"/>
         </scene>
-        <!--Todo View Controller-->
+        <!--Todo-->
         <scene sceneID="EQ4-SR-wCL">
             <objects>
                 <viewController id="xuK-jq-Jc7" customClass="TodoViewController" customModule="manyLists_pset05" customModuleProvider="target" sceneMemberID="viewController">
@@ -201,6 +259,14 @@
                             <constraint firstItem="riq-yz-9wU" firstAttribute="leading" secondItem="cbD-cA-7rv" secondAttribute="leading" id="YM0-aY-Nkz"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Todo" id="a3F-Yh-VNc">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="T6R-gE-U3Y">
+                            <color key="tintColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <segue destination="3C0-xz-xkR" kind="show" id="OFw-oL-QVR"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="todoTableView" destination="riq-yz-9wU" id="W9f-c6-YGv"/>
                     </connections>
