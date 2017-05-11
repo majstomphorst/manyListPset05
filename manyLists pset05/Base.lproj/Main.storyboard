@@ -263,7 +263,7 @@
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="T6R-gE-U3Y">
                             <color key="tintColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
-                                <segue destination="3C0-xz-xkR" kind="show" id="OFw-oL-QVR"/>
+                                <segue destination="3C0-xz-xkR" kind="show" identifier="addNewtTodoSegue" id="OFw-oL-QVR"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
