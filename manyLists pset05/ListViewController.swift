@@ -23,14 +23,14 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
         self.listTableView.reloadData()
     }
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "todoSegue" {
-//            if let indexPath = listTableView.indexPathForSelectedRow {
-//                let destVC = segue.destination as! TodoViewController
-//                destVC.tableLocation = concentDatabase[indexPath.row]
-//            }
-//        }
-//    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "todoTableSegue" {
+            if let indexPath = listTableView.indexPathForSelectedRow {
+                let destVC = segue.destination as! TodoViewController
+                destVC.tableLocation = concentDatabase[indexPath.row]
+            }
+        }
+    }
     
     
     //MARK: tableview functions

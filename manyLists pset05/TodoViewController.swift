@@ -12,6 +12,8 @@ class TodoViewController: UIViewController, UITabBarDelegate, UITableViewDataSou
 
     let lst = ["Dog","Cat"]
     
+    var tableLocation = String()
+    
     @IBOutlet weak var todoTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -169,7 +169,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="listCell" destination="3a1-t4-Vr3" id="r7p-nK-EMV"/>
-                                            <segue destination="xuK-jq-Jc7" kind="show" id="Nse-gc-cgP"/>
+                                            <segue destination="xuK-jq-Jc7" kind="show" identifier="todoTableSegue" id="Nse-gc-cgP"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
