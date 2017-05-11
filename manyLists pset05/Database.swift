@@ -17,21 +17,20 @@ class Database {
     private var connection: Connection?
     
     // creating tables properties
-    private let todoTable = Table("todoTable")
-    private let listTable = Table("listTable")
+    let todoTable = Table("todoTable")
+    let listTable = Table("listTable")
     
     // creating colum properties
-    private let id = Expression<Int64>("id")
-    private let check = Expression<Bool>("check")
-    private let todoText = Expression<String>("todoText")
-    private let list = Expression<String>("list")
+    let id = Expression<Int64>("id")
+    let check = Expression<Bool>("check")
+    let todoText = Expression<String>("todoText")
+    let list = Expression<String>("list")
     
     
     private init() {
         // creating the database
         setupDatabase()
-        createToDoTable()
-        createListTable()
+        createTables()
     }
     
     // sets up the database and creats the table in the database (it call the function createTable)
@@ -47,7 +46,7 @@ class Database {
     }
     
     // creats the tabels in a database file
-    func createToDoTable() {
+    func createTables() {
         do {
             try connection!.run(todoTable.create(ifNotExists: true) { t in
                 t.column(id, primaryKey: .autoincrement)
@@ -57,9 +56,8 @@ class Database {
         } catch {
             print("faild to create table\(error)")
         }
-    }
-    
-    func createListTable() {
+        
+        
         do {
             try connection!.run(listTable.create(ifNotExists: true) { t in
                 t.column(id, primaryKey: .autoincrement)
@@ -68,15 +66,16 @@ class Database {
         } catch {
             print("faild to create table\(error)")
         }
+        
     }
-    
-    func readListTableDatabase() -> [String] {
+   
+    func readDatabase(witchTable: Table, witchColum: Expression<String>) -> [String] {
         
         var concentOfDatabase = [String]()
         
         do {
-            for item in try connection!.prepare(listTable) {
-                concentOfDatabase.append(item[todoText])
+            for item in try connection!.prepare(witchTable) {
+                concentOfDatabase.append(item[witchColum])
             }
             
         } catch {
@@ -86,21 +85,19 @@ class Database {
         return concentOfDatabase
     }
     
-    func readTodoTableDatabase() -> [String] {
+    func rideListTableDatabase(text: String) {
         
-        var concentOfDatabase = [String]()
+        let insert = listTable.insert(list <- text)
         
         do {
-            for item in try connection!.prepare(todoTable) {
-                concentOfDatabase.append(item[list])
-            }
-            
+            try connection!.run(insert)
         } catch {
-            print("read database failed \(error)")
+            print("database insertion failed\(error)")
         }
-        
-        return concentOfDatabase
     }
+    
+    
+    
         
 
     

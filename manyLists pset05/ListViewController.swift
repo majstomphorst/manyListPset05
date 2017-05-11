@@ -9,6 +9,7 @@
 import UIKit
 import SQLite
 
+
 class ListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var listTableView: UITableView!
@@ -16,13 +17,16 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
     // let lst = ["row1","row2"]
     
     // store the concent of the database only the "todoText" field
-    var concentOfListTableDatabase = [String]()
+    var concentDatabase = [String]()
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        concentOfListTableDatabase = Database.shared.readListTableDatabase()
-        // Do any additional setup after loading the view, typically from a nib.
+    override func viewDidAppear(_ animated: Bool) {
+        
+        concentDatabase = Database.shared.readDatabase(witchTable: Database.shared.listTable, witchColum: Database.shared.list)
+        
+        
+        self.listTableView.reloadData()
     }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -31,13 +35,13 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     //MARK: tableview functions
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return concentOfListTableDatabase.count
+        return concentDatabase.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = listTableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ListTableViewCell
         
-        cell.listCell.text = concentOfListTableDatabase[indexPath.row]
+        cell.listCell.text = concentDatabase[indexPath.row]
         
         return cell
     }

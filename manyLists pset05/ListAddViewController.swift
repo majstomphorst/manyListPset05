@@ -10,6 +10,9 @@ import UIKit
 
 class ListAddViewController: UIViewController {
 
+    
+    @IBOutlet weak var addListField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,15 +24,12 @@ class ListAddViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    //MARK: actions
+    @IBAction func addListButton(_ sender: Any) {
+        Database.shared.rideListTableDatabase(text: addListField.text!)
     }
-    */
+    
+
+
 
 }
