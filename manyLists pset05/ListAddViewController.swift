@@ -30,8 +30,6 @@ class ListAddViewController: UIViewController {
         Database.shared.rideListTableDatabase(text: addListField.text!)
         addListField.text = ""
     }
-    
-
 
 
 }

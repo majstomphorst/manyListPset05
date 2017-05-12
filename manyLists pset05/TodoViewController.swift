@@ -57,7 +57,11 @@ class TodoViewController: UIViewController, UITabBarDelegate, UITableViewDataSou
         
         // handle delete (by removing the data from the database and updating the tableview)
         if (editingStyle == UITableViewCellEditingStyle.delete) {
+            Database.shared.dropRow(witchTable: Database.shared.todoTable, witchColum: Database.shared.todoText, text: concentDatabase[indexPath.row])
             
+            concentDatabase = Database.shared.readDatabase(witchTable: Database.shared.todoTable, witchColum: Database.shared.todoText, witchList: tableLocation)
+            
+            self.todoTableView.reloadData()
         }
         
         
