@@ -107,7 +107,6 @@ class Database {
     }
     
     
-    
     func rideListTableDatabase(text: String) {
         
         let insert = listTable.insert(list <- text)
@@ -155,7 +154,29 @@ class Database {
         return concent
     }
     
-    
+    func updateDoneTodoDatabase(text: String) {
+        var checking = Int()
+        print("updateDoneTodoDatabase")
+        
+        let change = todoTable.filter(todoText == text && check == false)
+        do {
+            checking = try connection!.run(change.update(check <- true))
+            
+        } catch {
+            print("update1 fout")
+        }
+        
+        if checking == 0 {
+            let change = todoTable.filter(todoText == text && check == true)
+            do {
+                checking = try connection!.run(change.update(check <- false))
+            } catch {
+                print("update2 fout")
+            }
+            
+       }
+        
+    }
         
 
     

@@ -8,14 +8,13 @@
 
 import UIKit
 
-class TodoViewController: UIViewController, UITabBarDelegate, UITableViewDataSource {
+class TodoViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     var concentDatabase = [String]()
     
     var tableLocation = String()
     
     @IBOutlet weak var todoTableView: UITableView!
-    
     
     // addNewtTodoSegue
     override func viewDidAppear(_ animated: Bool) {
@@ -39,6 +38,7 @@ class TodoViewController: UIViewController, UITabBarDelegate, UITableViewDataSou
         return concentDatabase.count
     }
     
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let bools = Database.shared.readCheckTodoDatabase()
@@ -52,7 +52,6 @@ class TodoViewController: UIViewController, UITabBarDelegate, UITableViewDataSou
         } else {
             cell.addCell.backgroundColor = UIColor.red
         }
-        
         
         return cell
     }
@@ -73,10 +72,16 @@ class TodoViewController: UIViewController, UITabBarDelegate, UITableViewDataSou
             
             self.todoTableView.reloadData()
         }
-        
-        
-        
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        // switches the items bool value (done / todo)
+        Database.shared.updateDoneTodoDatabase(text: concentDatabase[indexPath.row])
+        
+        // update's the table
+        self.todoTableView.reloadData()
+    }
+
 
 }
