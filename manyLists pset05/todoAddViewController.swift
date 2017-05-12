@@ -17,7 +17,6 @@ class todoAddViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        print(tableLocation)
         // Do any additional setup after loading the view.
     }
 
@@ -28,6 +27,8 @@ class todoAddViewController: UIViewController {
     
     @IBAction func addTodoButton(_ sender: Any) {
         Database.shared.rideTodoTableDatabase(text: addTodoField.text!, table: tableLocation)
+        
+        addTodoField.text = ""
     }
 
     /*

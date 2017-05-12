@@ -86,6 +86,28 @@ class Database {
         return concentOfDatabase
     }
     
+    func readDatabase(witchTable: Table, witchColum: Expression<String>, witchList: String) -> [String] {
+        
+        var concentOfDatabase = [String]()
+        
+        let query = witchTable.select(witchColum)           // SELECT "email" FROM "users"
+            .filter(Database.shared.list == witchList)     // WHERE "name" IS NOT NULL
+        
+        
+        do {
+            for item in try connection!.prepare(query) {
+                concentOfDatabase.append(item[witchColum])
+            }
+            
+        } catch {
+            print("read database failed \(error)")
+        }
+        
+        return concentOfDatabase
+    }
+    
+    
+    
     func rideListTableDatabase(text: String) {
         
         let insert = listTable.insert(list <- text)

@@ -12,6 +12,8 @@ class TodoViewController: UIViewController, UITabBarDelegate, UITableViewDataSou
 
     let lst = ["Dog","Cat"]
     
+    var concentDatabase = [String]()
+    
     var tableLocation = String()
     
     @IBOutlet weak var todoTableView: UITableView!
@@ -19,7 +21,13 @@ class TodoViewController: UIViewController, UITabBarDelegate, UITableViewDataSou
     
     // addNewtTodoSegue
     override func viewDidAppear(_ animated: Bool) {
+        // concentDatabase = Database.shared.readDatabase(witchTable: Database.shared.todoTable, witchColum: Database.shared.todoText)
         
+        concentDatabase = Database.shared.readDatabase(witchTable: Database.shared.todoTable, witchColum: Database.shared.todoText, witchList: tableLocation)
+        
+        
+        
+        self.todoTableView.reloadData()
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -31,13 +39,13 @@ class TodoViewController: UIViewController, UITabBarDelegate, UITableViewDataSou
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return lst.count
+        return concentDatabase.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = todoTableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TodoTableViewCell
-        cell.addCell.text = lst[indexPath.row]
+        cell.addCell.text = concentDatabase[indexPath.row]
         
         return cell
     }
