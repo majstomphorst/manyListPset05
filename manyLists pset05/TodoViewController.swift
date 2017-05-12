@@ -14,13 +14,12 @@ class TodoViewController: UIViewController, UITabBarDelegate, UITableViewDataSou
     
     var tableLocation = String()
     
-    // addNewtTodoSegue
-    
     @IBOutlet weak var todoTableView: UITableView!
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    
+    
+    // addNewtTodoSegue
+    override func viewDidAppear(_ animated: Bool) {
+        
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -38,7 +37,6 @@ class TodoViewController: UIViewController, UITabBarDelegate, UITableViewDataSou
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = todoTableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TodoTableViewCell
-        
         cell.addCell.text = lst[indexPath.row]
         
         return cell

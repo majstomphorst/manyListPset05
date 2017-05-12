@@ -104,6 +104,7 @@
                                         <state key="normal" title="Button"/>
                                         <connections>
                                             <action selector="addListButton:" destination="58y-gY-dVj" eventType="touchUpInside" id="HyR-Ef-0I6"/>
+                                            <action selector="addTodoButton:" destination="3C0-xz-xkR" eventType="touchUpInside" id="3Th-jA-lCS"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -125,6 +126,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Add new todo" id="JjY-2B-SCL" userLabel="Add new list"/>
+                    <connections>
+                        <outlet property="addTodoField" destination="qR7-at-ZYR" id="bb5-8f-8HN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8vw-72-i7v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -268,7 +272,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="todoTableView" destination="riq-yz-9wU" id="W9f-c6-YGv"/>
+                        <outlet property="todoTableView" destination="riq-yz-9wU" id="Z90-Bs-xdm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9T5-yF-C0b" userLabel="First Responder" sceneMemberID="firstResponder"/>
