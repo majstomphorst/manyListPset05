@@ -16,10 +16,20 @@ class TodoViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     @IBOutlet weak var todoTableView: UITableView!
     
+    override func encodeRestorableState(with coder: NSCoder) {
+        super.encodeRestorableState(with: coder)
+        
+        coder.encode(self.tableLocation, forKey: "table")
+    }
+    
+    override func decodeRestorableState(with coder: NSCoder) {
+        super.decodeRestorableState(with: coder)
+        
+        self.tableLocation = (coder.decodeObject(forKey: "table") as? String) ?? ""
+    }
+    
     // addNewtTodoSegue
     override func viewDidAppear(_ animated: Bool) {
-        // concentDatabase = Database.shared.readDatabase(witchTable: Database.shared.todoTable, witchColum: Database.shared.todoText)
-        
         concentDatabase = Database.shared.readDatabase(witchTable: Database.shared.todoTable, witchColum: Database.shared.todoText, witchList: tableLocation)
         
         
