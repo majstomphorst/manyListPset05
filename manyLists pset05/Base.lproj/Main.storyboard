@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Add new list-->
+        <!--listAdd-->
         <scene sceneID="ZU6-VA-YV9">
             <objects>
-                <viewController id="58y-gY-dVj" customClass="ListAddViewController" customModule="manyLists_pset05" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="listAdd" title="listAdd" useStoryboardIdentifierAsRestorationIdentifier="YES" id="58y-gY-dVj" customClass="ListAddViewController" customModule="manyLists_pset05" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fBN-U5-tAQ"/>
                         <viewControllerLayoutGuide type="bottom" id="TlX-HH-BVn"/>
@@ -72,10 +72,10 @@
             </objects>
             <point key="canvasLocation" x="850" y="-564"/>
         </scene>
-        <!--Add new todo-->
+        <!--todoAdd-->
         <scene sceneID="7f2-Fp-huT">
             <objects>
-                <viewController id="3C0-xz-xkR" customClass="todoAddViewController" customModule="manyLists_pset05" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="todoAdd" title="todoAdd" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3C0-xz-xkR" customClass="todoAddViewController" customModule="manyLists_pset05" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="flk-E0-Pk7"/>
                         <viewControllerLayoutGuide type="bottom" id="vvz-30-hCz"/>
@@ -134,10 +134,10 @@
             </objects>
             <point key="canvasLocation" x="1546" y="-564"/>
         </scene>
-        <!--Lists-->
+        <!--listView-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ListViewController" customModule="manyLists_pset05" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="listView" title="listView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ListViewController" customModule="manyLists_pset05" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -154,7 +154,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OmL-Ck-TcT" id="rEq-B1-87V">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3a1-t4-Vr3">
@@ -207,10 +207,10 @@
             </objects>
             <point key="canvasLocation" x="836" y="99"/>
         </scene>
-        <!--Todo-->
+        <!--todoView-->
         <scene sceneID="EQ4-SR-wCL">
             <objects>
-                <viewController id="xuK-jq-Jc7" customClass="TodoViewController" customModule="manyLists_pset05" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="todoView" title="todoView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="xuK-jq-Jc7" customClass="TodoViewController" customModule="manyLists_pset05" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dag-4X-ycc"/>
                         <viewControllerLayoutGuide type="bottom" id="LAa-vP-g0W"/>
@@ -227,7 +227,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1yq-Yr-X0W" id="urM-Ik-8HJ">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="phW-6k-XRC">
@@ -279,10 +279,10 @@
             </objects>
             <point key="canvasLocation" x="1586" y="99"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--navController-->
         <scene sceneID="jvs-hw-xPC">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="41b-bw-JXz" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="navController" title="navController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="41b-bw-JXz" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="6rm-tp-uTb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
