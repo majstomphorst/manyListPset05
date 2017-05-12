@@ -32,7 +32,6 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
     }
     
-    
     //MARK: tableview functions
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return concentDatabase.count
