@@ -160,7 +160,6 @@ class Database {
     
     func updateDoneTodoDatabase(text: String) {
         var checking = Int()
-        print("updateDoneTodoDatabase")
         
         let change = todoTable.filter(todoText == text && check == false)
         do {
