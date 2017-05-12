@@ -52,6 +52,7 @@ class Database {
                 t.column(id, primaryKey: .autoincrement)
                 t.column(check)
                 t.column(todoText, unique: true)
+                t.column(list)
             } )
         } catch {
             print("faild to create table\(error)")
