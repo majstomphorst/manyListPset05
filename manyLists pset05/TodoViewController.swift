@@ -41,8 +41,18 @@ class TodoViewController: UIViewController, UITabBarDelegate, UITableViewDataSou
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
+        let bools = Database.shared.readCheckTodoDatabase()
+        
         let cell = todoTableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TodoTableViewCell
         cell.addCell.text = concentDatabase[indexPath.row]
+        
+        // if a item is done make background green else red
+        if bools[indexPath.row] {
+            cell.addCell.backgroundColor = UIColor.green
+        } else {
+            cell.addCell.backgroundColor = UIColor.red
+        }
+        
         
         return cell
     }

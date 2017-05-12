@@ -119,7 +119,6 @@ class Database {
         }
     }
     
-    
     func rideTodoTableDatabase(text: String, table: String, completed: Bool = false) {
         let insert = todoTable.insert(todoText <- text, list <- table, check <- completed)
         
@@ -140,6 +139,21 @@ class Database {
         }
     }
     
+    func readCheckTodoDatabase() -> [Bool] {
+        
+        var concent = [Bool]()
+        
+        do {
+            for item in try connection!.prepare(todoTable) {
+                concent.append(item[check])
+            }
+            
+        } catch {
+            print("read  (bool) database failed \(error)")
+        }
+        
+        return concent
+    }
     
     
         
