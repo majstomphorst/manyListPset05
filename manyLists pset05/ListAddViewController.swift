@@ -8,10 +8,17 @@
 
 import UIKit
 
-class ListAddViewController: UIViewController {
+class ListAddViewController: UIViewController, UITextFieldDelegate {
 
     
     @IBOutlet weak var addListField: UITextField!
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.endEditing(true)
+        addListButton(textField)
+        
+        return false
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
