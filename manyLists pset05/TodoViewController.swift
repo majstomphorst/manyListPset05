@@ -41,7 +41,7 @@ class TodoViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let bools = Database.shared.readCheckTodoDatabase()
+        let bools = Database.shared.readCheckTodoDatabase(witchList: tableLocation)
         
         let cell = todoTableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TodoTableViewCell
         cell.addCell.text = concentDatabase[indexPath.row]

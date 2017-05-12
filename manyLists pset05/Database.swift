@@ -138,12 +138,16 @@ class Database {
         }
     }
     
-    func readCheckTodoDatabase() -> [Bool] {
+    func readCheckTodoDatabase(witchList: String) -> [Bool] {
         
         var concent = [Bool]()
         
+        let query = todoTable.select(check)           // SELECT "email" FROM "users"
+            .filter(Database.shared.list == witchList)     // WHERE
+        
+        
         do {
-            for item in try connection!.prepare(todoTable) {
+            for item in try connection!.prepare(query) {
                 concent.append(item[check])
             }
             
