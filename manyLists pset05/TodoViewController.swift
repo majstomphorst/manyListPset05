@@ -34,7 +34,7 @@ class TodoViewController: UIViewController, UITabBarDelegate, UITableViewDataSou
         }
     }
     
-    
+    //MARK: tableview
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return concentDatabase.count
     }
@@ -46,5 +46,23 @@ class TodoViewController: UIViewController, UITabBarDelegate, UITableViewDataSou
         
         return cell
     }
+    
+    // checking if item may be edited always true
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    // action is delete is pressed
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        
+        // handle delete (by removing the data from the database and updating the tableview)
+        if (editingStyle == UITableViewCellEditingStyle.delete) {
+            
+        }
+        
+        
+        
+    }
+    
 
 }
