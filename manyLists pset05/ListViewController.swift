@@ -56,6 +56,7 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
         // handle delete (by removing the data from the database and updating the tableview)
         if (editingStyle == UITableViewCellEditingStyle.delete) {
             Database.shared.dropRow(witchTable: Database.shared.listTable, witchColum: Database.shared.list, text: concentDatabase[indexPath.row])
+            Database.shared.dropRow(witchTable: Database.shared.todoTable, witchColum: Database.shared.list, text: concentDatabase[indexPath.row])
         }
         
         concentDatabase = Database.shared.readDatabase(witchTable: Database.shared.listTable, witchColum: Database.shared.list)

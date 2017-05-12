@@ -10,8 +10,6 @@ import UIKit
 
 class TodoViewController: UIViewController, UITabBarDelegate, UITableViewDataSource {
 
-    let lst = ["Dog","Cat"]
-    
     var concentDatabase = [String]()
     
     var tableLocation = String()
@@ -24,7 +22,6 @@ class TodoViewController: UIViewController, UITabBarDelegate, UITableViewDataSou
         // concentDatabase = Database.shared.readDatabase(witchTable: Database.shared.todoTable, witchColum: Database.shared.todoText)
         
         concentDatabase = Database.shared.readDatabase(witchTable: Database.shared.todoTable, witchColum: Database.shared.todoText, witchList: tableLocation)
-        
         
         
         self.todoTableView.reloadData()
