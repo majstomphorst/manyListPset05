@@ -37,7 +37,6 @@ class Database {
     func setupDatabase() {
         
         let path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!
-        print(path)
         do {
             connection = try Connection("\(path)/db.sqlite3")
         } catch {
